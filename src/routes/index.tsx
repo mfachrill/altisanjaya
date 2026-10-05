@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowDown, ArrowRight, Box, CalendarDays, ClipboardCheck, Fish, Globe2, Handshake, MapPin, Menu, PackageCheck, Search, ShieldCheck, Ship, Snowflake, Target, Thermometer, Truck, Warehouse, X } from "lucide-react";
+import { ArrowDown, ArrowRight, BadgeCheck, Boxes, Box, CalendarCheck, CalendarDays, ClipboardCheck, Fish, Gauge, Globe2, Handshake, Layers, MapPin, Menu, PackageCheck, Ruler, Search, ShieldCheck, Ship, SlidersHorizontal, Snowflake, Target, Thermometer, Truck, Warehouse, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import cover from "@/assets/ajs/cover.jpg";
@@ -59,6 +59,14 @@ const products = [
   { name: "Cakalang", sub: "Skipjack Tuna", img: cakalang }, { name: "Deho", sub: "", img: deho },
   { name: "Tuna Fillet", sub: "", img: tuna }, { name: "Dori Fillet", sub: "", img: dori },
   { name: "Kerapu", sub: "Grouper", img: kerapu }, { name: "Kakatua", sub: "Parrotfish", img: kakaktua },
+];
+const flexSourcing = [
+  { label: "Species", icon: Fish },
+  { label: "Size", icon: Ruler },
+  { label: "Grade", icon: BadgeCheck },
+  { label: "Form", icon: Layers },
+  { label: "Quantity", icon: Boxes },
+  { label: "Availability", icon: CalendarCheck },
 ];
 const strengths = [
   ["Local Market Access", "Access to one of Jakarta's major fishery trading hubs."],
