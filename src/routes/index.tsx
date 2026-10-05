@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Anchor, ArrowDown, ArrowRight, Box, CalendarDays, Check, ClipboardCheck, Fish, Globe2, Handshake, MapPin, Menu, PackageCheck, Search, ShieldCheck, Ship, Snowflake, Target, Thermometer, Truck, Warehouse, X } from "lucide-react";
+import { ArrowDown, ArrowRight, Box, CalendarDays, ClipboardCheck, Fish, Globe2, Handshake, MapPin, Menu, PackageCheck, Search, ShieldCheck, Ship, Snowflake, Target, Thermometer, Truck, Warehouse, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import cover from "@/assets/ajs/cover.jpg";
@@ -12,7 +12,6 @@ import process from "@/assets/ajs/process.jpg";
 import traction from "@/assets/ajs/traction.jpg";
 import why from "@/assets/ajs/why.jpg";
 import contact from "@/assets/ajs/contact.jpg";
-import logo from "@/assets/ajs/logo.jpg";
 import cakalang from "@/assets/ajs/cakalang.jpg";
 import deho from "@/assets/ajs/deho.jpg";
 import tuna from "@/assets/ajs/tuna.jpg";
