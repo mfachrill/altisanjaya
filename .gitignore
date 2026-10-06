@@ -30,3 +30,24 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local migration tools (not part of Laravel runtime)
+/.migration-tools/
+
+# Laravel local configuration and generated runtime files
+/laravel/.env
+/laravel/.env.*
+!/laravel/.env.example
+/laravel/vendor/
+/laravel/node_modules/
+/laravel/public/build/
+/laravel/public/hot
+/laravel/storage/app/*
+!/laravel/storage/app/.gitignore
+/laravel/storage/framework/cache/data/*
+/laravel/storage/framework/sessions/*
+/laravel/storage/framework/views/*
+/laravel/storage/logs/*
+
+# Optional demo renders and capture workspace
+/videos/

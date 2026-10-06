@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+
+// Forward root-level Artisan commands to the Laravel application.
+$applicationPath = __DIR__.'/laravel';
+
+if (! chdir($applicationPath)) {
+    fwrite(STDERR, "Unable to open the Laravel application directory.\n");
+    exit(1);
+}
+
+require $applicationPath.'/artisan';

@@ -1,0 +1,104 @@
+@import "tailwindcss" source(none);
+@source "../views/**/*.blade.php";
+@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
+
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Manrope", sans-serif;
+  --font-display: "Barlow Condensed", sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-input: var(--border);
+  --color-ring: var(--primary);
+  --color-ocean: var(--ocean);
+  --color-gold: var(--gold);
+  --color-paper: var(--paper);
+  --color-sky: var(--sky);
+  --color-deep: var(--deep);
+  --color-deep-foreground: var(--deep-foreground);
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+}
+:root {
+  --background: oklch(0.985 0.004 245);
+  --foreground: oklch(0.22 0.055 254);
+  --card: oklch(1 0 0);
+  --primary: oklch(0.43 0.14 250);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.94 0.025 240);
+  --muted: oklch(0.955 0.011 250);
+  --muted-foreground: oklch(0.49 0.03 250);
+  --accent: oklch(0.89 0.05 230);
+  --border: oklch(0.86 0.02 245);
+  --ocean: oklch(0.38 0.12 250);
+  --gold: oklch(0.73 0.12 78);
+  --paper: oklch(0.995 0.002 230);
+  --sky: oklch(0.95 0.025 230);
+  --deep: oklch(0.22 0.073 251);
+  --deep-foreground: oklch(0.98 0.004 245);
+}
+@layer base {
+  * { border-color: var(--border); }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-sans); }
+  h1,h2,h3,p { margin-top: 0; }
+  ::selection { background: var(--accent); color: var(--deep); }
+}
+@layer components {
+  .display { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; line-height: .91; letter-spacing: 0; }
+  .section-title { font-family: var(--font-display); font-size: clamp(3.4rem, 6.7vw, 6.5rem); font-weight: 700; text-transform: uppercase; line-height: .92; letter-spacing: 0; }
+  .section-kicker { font-size: .72rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; color: var(--primary); }
+  .section-shell { max-width: 1440px; margin-inline: auto; padding: clamp(4.5rem, 8vw, 8rem) clamp(1.25rem, 5vw, 5rem); }
+  .section-rule { width: 5rem; height: 2px; background: var(--gold); margin-block: 1.6rem; }
+  .section-copy { font-size: clamp(1rem, 1.25vw, 1.18rem); line-height: 1.8; max-width: 63ch; }
+  .image-frame { overflow: hidden; border-radius: .35rem; }
+  .image-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .blue-rule { height: 1px; background: var(--border); }
+  .number-label { font-family: var(--font-display); font-size: 2.1rem; font-weight: 700; line-height: 1; color: var(--gold); }
+  .nav-link { transition: color .2s; }
+  .nav-link:hover { color: var(--primary); }
+  .grid-line > * { border-bottom: 1px solid var(--border); }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *,*::before,*::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
+@layer components {
+  .portal-shell { max-width: 1280px; margin-inline: auto; padding: clamp(2.5rem,5vw,5rem) 1.25rem; min-height: 65vh; }
+  .portal-title { font-family: var(--font-display); font-size: clamp(2.8rem,5.5vw,5.5rem); font-weight: 700; text-transform: uppercase; line-height: 1; overflow-wrap: anywhere; }
+  .card { border: 1px solid var(--border); border-radius: .75rem; padding: clamp(1.25rem,3vw,2rem); background: var(--paper); min-width: 0; }
+  .btn, .btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; border-radius: .35rem; padding: .85rem 1.25rem; font-weight: 800; font-size: .875rem; line-height: 1.4; transition: background .2s, transform .2s; cursor: pointer; text-align: center; }
+  .btn { background: var(--primary); color: var(--primary-foreground); border: 1px solid var(--primary); }
+  .btn:hover { background: var(--ocean); }
+  .btn-secondary { border: 1px solid var(--border); color: var(--ocean); background: var(--paper); }
+  .btn-secondary:hover { background: var(--sky); }
+  .btn-small { padding: .65rem .9rem; font-size: .75rem; }
+  .field-label { display: block; font-size: .8rem; font-weight: 800; color: var(--deep); margin-bottom: .55rem; }
+  .field { display: block; width: 100%; max-width: 100%; border: 1px solid var(--border); border-radius: .35rem; padding: .85rem; background: var(--paper); color: var(--deep); font-size: 1rem; }
+  .notice, .error-notice { padding: 1rem 1.25rem; border: 1px solid var(--border); border-left: 3px solid var(--primary); background: var(--sky); border-radius: .35rem; font-size: .875rem; line-height: 1.7; }
+  .error-notice { border-color: #fecaca; border-left-color: #991b1b; color: #7f1d1d; background: #fff1f2; }
+  .status { display: inline-block; border-radius: 2rem; padding: .3rem .75rem; font-size: .7rem; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; }
+  .status-positive { color: #166534; background: #dcfce7; }
+  .status-negative { color: #991b1b; background: #fee2e2; }
+  .status-pending { color: #854d0e; background: #fef9c3; }
+  .nav-link { font-size: .875rem; font-weight: 800; letter-spacing: .015em; text-transform: uppercase; color: var(--deep); }
+}
+#mobile-menu a { display: block; padding: .9rem 0; border-bottom: 1px solid var(--border); font-size: .95rem; font-weight: 800; }
+button:disabled { opacity: .6; cursor: wait; }
+a,button,input,textarea,select { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+img { max-width: 100%; }
+.skip-link { position: fixed; left: 1rem; top: -6rem; z-index: 100; padding: 1rem; background: var(--paper); color: var(--deep); }
+.skip-link:focus { top: 1rem; }
