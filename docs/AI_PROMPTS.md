@@ -42,7 +42,3 @@ Hasilnya: public profile, Buyer Portal, dan Admin Portal menggunakan bahasa visu
 > Tambahkan automated test untuk demo 300 KG Cakalang: buyer login, add to cart, submit Request Order, admin login, confirm request, lalu pastikan stock berubah dari 850 KG menjadi 550 KG.
 
 Hasilnya: demo flow utama tercakup oleh automated test Laravel.
-
-## Review Manual Setelah AI Assistance
-
-Semua kode hasil bantuan AI ditinjau kembali untuk memastikan route, migration, validation, Eloquent relationship, Blade view, business rule, dan test dapat dijelaskan saat interview. AI digunakan untuk mempercepat iterasi, bukan menggantikan pemahaman atas implementasi.
