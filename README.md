@@ -10,7 +10,7 @@ The runnable application is in **`laravel/`**. The Laravel rebuild is the only a
 - Laravel session authentication; small vanilla JavaScript menu and submit behavior
 
 ## Features
-- Public Company Profile: eleven original sections in PDF order
+- Public Company Profile
 - Commodity Catalog and Product Detail
 - Buyer Authentication and dashboard
 - Session-based Cart
