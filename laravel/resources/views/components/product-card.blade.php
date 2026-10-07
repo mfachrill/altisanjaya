@@ -1,6 +1,6 @@
 @props(['product'])
 <article class="group overflow-hidden rounded-2xl border border-border bg-paper shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-<a href="{{ route('commodities.show',$product->slug) }}" class="block">
+<a href="{{ route(request()->routeIs('buyer.*') ? 'buyer.products.show' : 'commodities.show',$product->slug) }}" class="block">
 <div class="relative aspect-[1.5] overflow-hidden bg-deep">
 <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" loading="lazy" class="h-full w-full object-cover transition duration-700 group-hover:scale-105">
 <div class="absolute inset-0 bg-gradient-to-t from-deep/60 to-transparent">

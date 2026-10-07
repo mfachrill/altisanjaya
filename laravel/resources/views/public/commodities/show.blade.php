@@ -2,7 +2,7 @@
 @section('title',$product->name.' | AJS')
 @section('content')
 <div class="portal-shell">
-<a href="{{ route('commodities.index') }}" class="text-sm font-bold text-primary">← Commodity catalog</a>
+<a href="{{ route(request()->routeIs('buyer.*') ? 'buyer.catalog' : 'commodities.index') }}" class="text-sm font-bold text-primary">← Commodity catalog</a>
 <div class="mt-8 grid gap-10 lg:grid-cols-2">
 <div>
 <div class="image-frame aspect-[1.15]">

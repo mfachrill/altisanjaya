@@ -40,7 +40,7 @@
                                 <a href="{{ route('admin.products.edit', $product) }}" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border text-ocean transition hover:border-primary hover:bg-sky" aria-label="Edit {{ $product->name }}" title="Edit product">
                                     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" class="h-4 w-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
                                 </a>
-                                <form method="POST" action="{{ route('admin.products.destroy', $product) }}" onsubmit="return confirm('Delete {{ addslashes($product->name) }}? This cannot be undone.')">
+                                <form method="POST" action="{{ route('admin.products.destroy', $product) }}" data-confirm-action="delete" data-product-name="{{ $product->name }}">
                                     @csrf @method('DELETE')
                                     <button class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-red-200 text-red-800 transition hover:bg-red-50" type="submit" aria-label="Delete {{ $product->name }}" title="Delete product">
                                         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" class="h-4 w-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6M10 11v5M14 11v5"/></svg>

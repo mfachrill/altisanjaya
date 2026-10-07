@@ -102,3 +102,10 @@ a,button,input,textarea,select { -webkit-tap-highlight-color: transparent; }
 img { max-width: 100%; }
 .skip-link { position: fixed; left: 1rem; top: -6rem; z-index: 100; padding: 1rem; background: var(--paper); color: var(--deep); }
 .skip-link:focus { top: 1rem; }
+
+.auth-success-popup { position: fixed; inset: 0; margin: auto; width: min(26rem, calc(100% - 2rem)); max-height: calc(100dvh - 2rem); overflow-y: auto; }
+.auth-success-popup::backdrop { background: rgb(8 28 42 / 55%); backdrop-filter: blur(4px); }
+html:has(.auth-success-popup[open]) { overflow: hidden; }
+
+.btn.confirm-delete { background: #991b1b; border-color: #991b1b; color: #fff; }
+.btn.confirm-delete:hover { background: #7f1d1d; border-color: #7f1d1d; }

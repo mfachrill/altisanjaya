@@ -1,4 +1,4 @@
-<form method="POST" action="{{ $action }}" class="card space-y-7">
+<form method="POST" action="{{ $action }}" class="card space-y-7" @if($method === 'PATCH') data-confirm-action="save" @endif>
 @csrf
 @if($method !== 'POST') @method($method) @endif
 <section>

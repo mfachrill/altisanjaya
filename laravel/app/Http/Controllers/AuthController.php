@@ -29,10 +29,10 @@ class AuthController extends Controller
         RateLimiter::clear($key);
         $request->session()->regenerate();
         if ($request->user()->role === 'admin') {
-            return redirect()->route('admin.dashboard');
+            return redirect()->route('admin.dashboard')->with('auth_success', 'login');
         }
 
-        return redirect()->intended(route('buyer.dashboard'));
+        return redirect()->intended(route('buyer.dashboard'))->with('auth_success', 'login');
     }
 
     public function destroy(Request $request)
@@ -41,6 +41,6 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect()->route('home');
+        return redirect()->route('home')->with('auth_success', 'logout');
     }
 }

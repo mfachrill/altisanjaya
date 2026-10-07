@@ -43,5 +43,7 @@
         </div>
     </aside>
     @endunless
+    <x-auth-success-popup />
+    <x-action-popups />
 </body>
 </html>
